@@ -12,14 +12,6 @@ import getVisibleExpenses from './selectors/expenses'
 import registerServiceWorker from './registerServiceWorker';
 
 const store = configureStore();
-store.dispatch(addExpense({ description: 'Water Bill', amount: 12332 }));
-store.dispatch(addExpense({ description: 'Gas Bill', amount: 1223333 }));
-
-const state = store.getState();
-const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-
-
-console.log(visibleExpenses);
 
 const jsx = (
     <Provider store={store}>
